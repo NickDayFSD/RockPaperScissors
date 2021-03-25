@@ -1,45 +1,45 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { throwCompare } from '../utils.js';
+import { doesUserWin } from '../utils.js';
 
 const test = QUnit.test;
 
-test('if this takes in 1, return rock', (expect) => {
+test('if this takes in rock and rock, return tie', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'rock';
+    const expected = 'tie';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = throwCompare(1);
+    const actual = doesUserWin('rock', 'rock');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('if this takes in 2, return paper', (expect) => {
+test('if this takes in rock and paper, return win', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'paper';
+    const expected = 'win';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = throwCompare(2);
+    const actual = doesUserWin('rock', 'paper');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('if this takes in 3, return scissors', (expect) => {
+test('if this takes in rock and scissors, return lose', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'scissors';
+    const expected = 'lose';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = throwCompare(3);
+    const actual = doesUserWin('rock', 'scissors');
 
     //Expect
     // Make assertions about what is expected versus the actual result
