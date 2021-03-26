@@ -1,11 +1,11 @@
 
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
+    --color1: hsla(261, 54%, 10%, 1);
+    --color2: hsla(44, 81%, 67%, 1);
+    --color3: hsla(141, 30%, 91%, 1);
+    --color4: hsla(153, 6%, 70%, 1);
+    --color5: hsla(141, 30%, 91%, 1);
 
     /* --color1: hsla(45, 86%, 83%, 1);
     --color2: hsla(135, 65%, 98%, 1);
@@ -36,7 +36,7 @@ section.radio-buttons {
     max-width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
@@ -44,6 +44,7 @@ section.radio-buttons {
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
+
 section.main-section {
     background-color: var(--color5);
     width: 1000px;
@@ -58,6 +59,12 @@ section.main-section {
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
+
+.rules {
+    padding: 30px;
+    text-align: center;
+}
+
 section.change-buttons {
     background-color: var(--color5);
     width: 1000px;
@@ -75,7 +82,8 @@ section.change-buttons {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -108,11 +116,20 @@ header img {
 
 input {
     display: none;
-    size: 30%;
 }
 
-input:checked {
-    size: 50%;
+img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+input:checked + img {
+    width: 120px;
+    height: 120px;
+    border: gold;
+    border-radius: 10px;
+    background-color: gold;
 }
 
 content {
