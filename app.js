@@ -2,7 +2,7 @@
 import {
     throwSelector,
     doesUserWin
-} from './utils.js'
+} from './utils.js';
 
 // buttons
 const throwButton = document.querySelector('#submit');
@@ -28,7 +28,7 @@ winsEl.textContent = `Wins = ${wins}`;
 lossEl.textContent = `Losses = ${losses}`;
 drawEl.textContent = `Ties = ${ties}`;
 totalsEl.textContent = `Total Games = ${wins + losses + ties}`;
-resetsEl.textContent = ``
+resetsEl.textContent = ``;
 
 // set event listeners to update state and DOM
 throwButton.addEventListener('click', () => {
@@ -47,14 +47,14 @@ throwButton.addEventListener('click', () => {
         losses++;
     } else {
         wins++;
-    };
+    }
 
     resultsEl.textContent = `Your ${userThrow} vs my ${robotThrow} means you ${result}!`;
     winsEl.textContent = `Wins = ${wins}`;
     lossEl.textContent = `Losses = ${losses}`;
     drawEl.textContent = `Ties = ${ties}`;
     totalsEl.textContent = `Total Games = ${wins + losses + ties}`;
-    resetsEl.textContent = `Erase?`
+    resetsEl.textContent = `Erase?`;
 
 });
 
@@ -69,5 +69,5 @@ resetButton.addEventListener('click', () => {
     lossEl.textContent = `Losses = ${losses}`;
     drawEl.textContent = `Ties = ${ties}`;
     totalsEl.textContent = `Total Games = ${wins + losses + ties}`;
-    resetsEl.textContent = `You've erased history ${resetPressed} times.`
-})
+    resetsEl.textContent = `You've erased history ${resetPressed} times.`;
+});

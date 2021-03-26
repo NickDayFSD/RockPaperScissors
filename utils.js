@@ -7,7 +7,7 @@ export function throwSelector() {
     } else {
         return 'scissors';
     }
-};
+}
 
 export function doesUserWin(randomThrow, userThrow) {
     if (randomThrow === userThrow) {
@@ -17,4 +17,4 @@ export function doesUserWin(randomThrow, userThrow) {
     } else {
         return 'lose';
     }
-};
+}
