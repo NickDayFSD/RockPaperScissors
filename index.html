@@ -14,9 +14,9 @@
 
 <body>
     <header>
-        <div>
+        <h2>
             Let's Play Rock, Paper, Scissors!
-        </div>
+        </h2>
     </header>
     <main>
         <section class="main-section">
@@ -26,25 +26,29 @@
             </div>
             <section class="radio-buttons">
                 <label>
-                    rock
                     <input type="radio" name="selection" value="rock" />
+                    <img src="./assets/rock.png" />
                 </label>
                 <label>
-                    paper
                     <input type="radio" name="selection" value="paper" />
+                    <img src="./assets/paper.png" />
                 </label>
                 <label>
-                    scissors
                     <input type="radio" name="selection" value="scissors" />
+                    <img src="./assets/scissors.png" />
                 </label>
             </section>
-            <button id="submit">Let's GO!</button>
+            <section class="change-buttons">
+                <button id="submit">Let's GO!</button>
+                <button id="reset">Erase History</button>
+            </section>
             <div id="results"></div>
             <div id="total-wins"></div>
             <div id="total-losses"></div>
             <div id="total-draws"></div>
             <div id="total-throws"></div>
-            <button id="reset">Erase History</button>
+            <div id="total-resets"></div>
+
         </section>
     </main>
     <footer>
