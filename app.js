@@ -14,11 +14,21 @@ const winsEl = document.querySelector('#total-wins');
 const lossEl = document.querySelector('#total-losses');
 const drawEl = document.querySelector('#total-draws');
 const totalsEl = document.querySelector('#total-throws');
+const resetsEl = document.querySelector('#total-resets');
 
 // initialize state
 let wins = 0;
 let losses = 0;
 let ties = 0;
+let resetPressed = 0;
+
+// initial text
+resultsEl.textContent = `Let's Play!`;
+winsEl.textContent = `Wins = ${wins}`;
+lossEl.textContent = `Losses = ${losses}`;
+drawEl.textContent = `Ties = ${ties}`;
+totalsEl.textContent = `Total Games = ${wins + losses + ties}`;
+resetsEl.textContent = ``
 
 // set event listeners to update state and DOM
 throwButton.addEventListener('click', () => {
@@ -44,5 +54,20 @@ throwButton.addEventListener('click', () => {
     lossEl.textContent = `Losses = ${losses}`;
     drawEl.textContent = `Ties = ${ties}`;
     totalsEl.textContent = `Total Games = ${wins + losses + ties}`;
+    resetsEl.textContent = `Erase?`
 
+});
+
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    ties = 0;
+    losses = 0;
+    resetPressed++;
+
+    resultsEl.textContent = `We got off on the wrong foot; let's try again.`;
+    winsEl.textContent = `Wins = ${wins}`;
+    lossEl.textContent = `Losses = ${losses}`;
+    drawEl.textContent = `Ties = ${ties}`;
+    totalsEl.textContent = `Total Games = ${wins + losses + ties}`;
+    resetsEl.textContent = `You've erased history ${resetPressed} times.`
 })
